@@ -6,6 +6,7 @@ import model.dao.DaoFactory;
 import model.dao.SellerDao;
 
 import java.util.Date;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +17,16 @@ public class Main {
 
         System.out.println("=== Test 1: seller findById ===");
         Seller seller = sellerDao.findById(3);
-
         System.out.println(seller);
+
+
+        System.out.println();
+        System.out.println("=== Test 2: seller findByDepartment ===");
+        Department departmente = new Department(2, null);
+        List<Seller> list = sellerDao.findByDepartment(departmente);
+        list.forEach(System.out::println);
+
+
 
 
 
