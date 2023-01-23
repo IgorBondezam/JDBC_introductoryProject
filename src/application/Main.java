@@ -32,6 +32,13 @@ public class Main {
         list.forEach(System.out::println);
 
 
+        System.out.println();
+        System.out.println("=== Test 4: seller Insert ===");
+        Seller newSeleer = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000d, departmente);
+        sellerDao.insert(newSeleer);
+        System.out.println("Inserted! " + newSeleer.getId());
+
+
 
 
 
